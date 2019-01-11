@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
     if params[:name] && params[:name] != ""
       session[:name] = params[:name]
-      redirect_to "/"
+       redirect_to controller: 'application', action: 'hello'
     else
       redirect_to '/login'
     end
